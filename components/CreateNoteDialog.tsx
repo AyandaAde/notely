@@ -93,7 +93,7 @@ const CreateNoteDialog = (props: Props) => {
                             }
                         </div>
                         {createNoteBook.isPending && (
-                            <p>Do not refresh page</p>
+                            <p className="mt-[5px]">Do not refresh page</p>
                         )}
                     </form>
                 </DialogContent>

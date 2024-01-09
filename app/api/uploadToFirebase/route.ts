@@ -4,7 +4,6 @@ import { uploadFileToFirebase } from "@/lib/firebase";
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
-export const runtime = "edge";
 export async function POST(req: Request) {
   try {
     const { noteId } = await req.json();

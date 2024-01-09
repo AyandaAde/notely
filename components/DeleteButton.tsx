@@ -33,11 +33,11 @@ const DeleteButton = ({ noteId }: Props) => {
                 if (!confirm) return;
                 deleteNote.mutate(undefined, {
                     onSuccess: () => {
-                        toast('Notebook deleted successfully.')
+                        toast.success('Notebook deleted successfully.')
                         router.push("/dashboard");
                     },
                     onError: (err) => {
-                        toast('Failed to delete Notebook. Please try again.')
+                        toast.error('Failed to delete Notebook. Please try again.')
                         console.error(err)
                     }
                 })

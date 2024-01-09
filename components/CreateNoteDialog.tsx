@@ -40,11 +40,11 @@ const CreateNoteDialog = (props: Props) => {
             onSuccess({ note_id }) {
                 console.log("created new note", { note_id });
                 uploadToFirebase.mutate(note_id);
-                toast('New notebook created!')
+                toast.success('New notebook created!')
                 router.push(`/notebook/${note_id}`);
             },
             onError(error) {
-                toast('Filaed to create new notebook. Please try again.')
+                toast.error('Filaed to create new notebook. Please try again.')
                 console.error(error);
             }
         })

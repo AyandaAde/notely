@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { toast } from 'sonner'
 
 type Props = {}
 
@@ -39,11 +40,12 @@ const CreateNoteDialog = (props: Props) => {
             onSuccess({ note_id }) {
                 console.log("created new note", { note_id });
                 uploadToFirebase.mutate(note_id);
+                toast('New notebook created!')
                 router.push(`/notebook/${note_id}`);
             },
             onError(error) {
+                toast('Filaed to create new notebook. Please try again.')
                 console.error(error);
-                window.alert("Failed to create new notebook");
             }
         })
     }

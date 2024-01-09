@@ -5,6 +5,7 @@ import { Button } from "./ui/button"
 import { useMutation } from "@tanstack/react-query"
 import axios from "axios"
 import { useRouter } from "next/navigation";
+import { toast } from 'sonner'
 
 type Props = {
     noteId: number
@@ -32,9 +33,11 @@ const DeleteButton = ({ noteId }: Props) => {
                 if (!confirm) return;
                 deleteNote.mutate(undefined, {
                     onSuccess: () => {
+                        toast('Notebook deleted successfully.')
                         router.push("/dashboard");
                     },
                     onError: (err) => {
+                        toast('Failed to delete Notebook. Please try again.')
                         console.error(err)
                     }
                 })

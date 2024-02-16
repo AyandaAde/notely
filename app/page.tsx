@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import TypeWriterTitle from '@/components/TypeWriterTitle'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
@@ -26,6 +27,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

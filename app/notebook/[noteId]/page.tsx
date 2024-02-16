@@ -1,4 +1,5 @@
 import DeleteButton from "@/components/DeleteButton";
+import Footer from "@/components/Footer";
 import TipTapEditor from "@/components/TipTapEditor";
 import { Button } from "@/components/ui/button";
 import { clerk } from "@/lib/clerk-server";
@@ -52,8 +53,8 @@ const NotebookPage = async ({ params: { noteId } }: Props) => {
                 <div className="border-stone-200 shadow-xl border rounded-lg px-16 py-8 w-full">
                     <TipTapEditor note={note} />
                 </div>
-
             </div>
+            <Footer />
         </div>
     )
 }

@@ -73,7 +73,6 @@ const DashboardPage = async (props: Props) => {
                     })}
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

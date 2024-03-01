@@ -54,7 +54,6 @@ const NotebookPage = async ({ params: { noteId } }: Props) => {
                     <TipTapEditor note={note} />
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
